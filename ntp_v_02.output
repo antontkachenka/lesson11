@@ -1,0 +1,30 @@
+[0;32mInfo: Using configured environment 'production'[0m
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for puppetnode1.minsk.epam.com[0m
+[0;32mInfo: Applying configuration version '1474378395'[0m
+[mNotice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/content: 
+--- /etc/ntp.conf	2016-09-20 14:27:16.173008996 +0100
++++ /tmp/puppet-file20160920-19018-1nvnzkk	2016-09-20 14:33:16.692720246 +0100
+@@ -23,9 +23,9 @@
+ # prefer - select preferrable server
+ # minpoll - set minimal update frequency
+ # maxpoll - set maximal update frequency
+-server nist-time-server.eoni.com
+-server nist1-lv.ustiming.org
+-server ntp-nist.ldsbc.edu
++server 0.centos.pool.ntp.org
++server 1.centos.pool.ntp.org
++server 2.centos.pool.ntp.org
+ 
+ 
+ # Driftfile.
+[0m
+[0;32mInfo: Computing checksum on file /etc/ntp.conf[0m
+[0;32mInfo: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]: Filebucketed /etc/ntp.conf to puppet with sum 605b84306837e0c082c8ad36fbb2fbdf[0m
+[mNotice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/content: content changed '{md5}605b84306837e0c082c8ad36fbb2fbdf' to '{md5}1f44e40bd99abd89f0a209e823285332'[0m
+[0;32mInfo: Class[Ntp::Config]: Scheduling refresh of Class[Ntp::Service][0m
+[0;32mInfo: Class[Ntp::Service]: Scheduling refresh of Service[ntp][0m
+[mNotice: /Stage[main]/Ntp::Service/Service[ntp]: Triggered 'refresh' from 1 events[0m
+[mNotice: Applied catalog in 0.40 seconds[0m
